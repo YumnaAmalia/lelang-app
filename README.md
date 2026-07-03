@@ -21,7 +21,7 @@ Laravel Framework
 PHP
 MySQL
 Bootstrap
-PHPWord
+DomPDF
 Simple QrCode
 JavaScript
 HTML & CSS
