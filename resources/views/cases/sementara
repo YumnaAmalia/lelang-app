@@ -1,0 +1,121 @@
+<h2>Detail Kasus</h2>
+
+<p>Nama: {{ $case->nama_terpidana }}</p>
+<p>No Putusan: {{ $case->nomor_putusan }}</p>
+
+<hr> <!-- BARANG -->
+
+
+<h3>Input Barang Lelang</h3>
+
+<form method="POST" action="/barang">
+    @csrf
+    <input type="hidden" name="case_id" value="{{ $case->id }}">
+
+    <div id="barang-container">
+        <div class="barang-item">
+            <input type="text" name="jenis_barang[]" placeholder="Jenis Barang">
+            <input type="number" name="nilai_limit[]" placeholder="Nilai Limit">
+            <input type="number" name="uang_jaminan[]" placeholder="Uang Jaminan">
+            <input type="text" name="lokasi[]" placeholder="Lokasi">
+        </div>
+    </div>
+
+    <br>
+
+    <button type="button" onclick="tambahBarang()">+ Tambah Barang</button>
+    <button type="submit">Simpan Barang</button>
+</form><!-- END BARANG -->
+
+<hr> <!-- PEJABAT PENJUAL -->
+
+<h3>Input Pejabat Penjual</h3>
+
+<form method="POST" action="/pejabat">
+    @csrf
+    <input type="hidden" name="case_id" value="{{ $case->id }}">
+
+    <div id="pejabat-container">
+        <div>
+            <input type="text" name="nama[]" placeholder="Nama">
+            <input type="text" name="nip[]" placeholder="NIP">
+            <input type="text" name="pangkat[]" placeholder="Pangkat">
+            <input type="text" name="jabatan[]" placeholder="Jabatan">
+        </div>
+    </div>
+
+    <button type="button" onclick="tambahPejabat()">+ Tambah</button>
+    <button type="submit">Simpan Pejabat</button>
+</form><!-- END PEJABAT PENJUAL -->
+
+<hr> <!-- PELAKSANA LELANG -->
+
+<h3>Input Pelaksana Lelang</h3>
+
+<form method="POST" action="/pelaksana">
+    @csrf
+    <input type="hidden" name="case_id" value="{{ $case->id }}">
+
+    <div id="pelaksana-container">
+        <div>
+            <input type="text" name="nama[]" placeholder="Nama">
+            <input type="text" name="nip[]" placeholder="NIP">
+            <input type="text" name="pangkat[]" placeholder="Pangkat">
+            <input type="text" name="jabatan[]" placeholder="Jabatan">
+        </div>
+    </div>
+
+    <button type="button" onclick="tambahPelaksana()">+ Tambah</button>
+    <button type="submit">Simpan</button>
+</form><!-- END PELAKSANA LELANG -->
+
+
+<!-- BARANG -->
+<script>
+function tambahBarang() {
+    let html = `
+    <div class="barang-item">
+        <input type="text" name="jenis_barang[]" placeholder="Jenis Barang">
+        <input type="number" name="nilai_limit[]" placeholder="Nilai Limit">
+        <input type="number" name="uang_jaminan[]" placeholder="Uang Jaminan">
+        <input type="text" name="lokasi[]" placeholder="Lokasi">
+    </div>
+    `;
+
+    document.getElementById('barang-container').insertAdjacentHTML('beforeend', html);
+}
+</script><!-- END BARANG -->
+
+<!-- PEJABAT PENJUAL -->
+<script> 
+function tambahPejabat() {
+    let html = `
+    <div>
+        <input type="text" name="nama[]" placeholder="Nama">
+        <input type="text" name="nip[]" placeholder="NIP">
+        <input type="text" name="pangkat[]" placeholder="Pangkat">
+        <input type="text" name="jabatan[]" placeholder="Jabatan">
+    </div>
+    `;
+
+    document.getElementById('pejabat-container').insertAdjacentHTML('beforeend', html);
+}
+</script>
+<!-- END PEJABAT PENJUAL -->
+
+<!-- PELAKSANA LELANG -->
+<script>
+function tambahPelaksana() {
+    let html = `
+    <div>
+        <input type="text" name="nama[]" placeholder="Nama">
+        <input type="text" name="nip[]" placeholder="NIP">
+        <input type="text" name="pangkat[]" placeholder="Pangkat">
+        <input type="text" name="jabatan[]" placeholder="Jabatan">
+    </div>
+    `;
+
+    document.getElementById('pelaksana-container').insertAdjacentHTML('beforeend', html);
+}
+</script><!-- END PELAKSANA LELANG -->
+
