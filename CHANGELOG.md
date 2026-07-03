@@ -1,6 +1,30 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/laravel/compare/v12.12.1...12.x)
+## [Unreleased](https://github.com/laravel/laravel/compare/v1.0.0...main)
+
+## [v1.0.0](https://github.com/laravel/laravel/compare/v12.12.1...v1.0.0) - 2026-07-03
+
+### Version 1.0.0
+
+Initial release of the Web-Based Auction Administration Management Information System with Document Automation.
+
+#### Main Features
+
+- Case data management
+- Evidence item management
+- Automatic document generation
+- QR Code document verification
+- Document management and archiving
+
+#### Technologies
+
+- Laravel Framework
+- PHP
+- MySQL
+- DomPDF
+- Simple QrCode
+
+Developed as part of an undergraduate thesis at BINUS University.
 
 ## [v12.12.1](https://github.com/laravel/laravel/compare/v12.12.0...v12.12.1) - 2026-03-10
 
