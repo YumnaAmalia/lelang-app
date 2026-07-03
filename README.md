@@ -1,59 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Web-Based Auction Administration Management Information System with Document Automation
+Overview
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains the source code for the undergraduate thesis project entitled:
 
-## About Laravel
+Development of a Web-Based Auction Administration Management Information System with Document Automation at the Prosecutor's Office
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application was developed to support the administration of auction activities for confiscated and state-owned assets by automating document generation, managing case and evidence data, and providing document authenticity verification using QR Codes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Main Features
+Case management
+Evidence item management
+Officer and executor management
+Operator management
+Automatic document generation from predefined templates
+QR Code-based document verification
+Digital document management and archiving
+Dashboard for monitoring auction administration
+Technology Stack
+Laravel Framework
+PHP
+MySQL
+Bootstrap
+PHPWord
+Simple QrCode
+JavaScript
+HTML & CSS
+System Requirements
+PHP 8.3 or later
+Composer
+MySQL / MariaDB
+Node.js & npm (optional, for frontend asset compilation)
+Web Server (Apache/Nginx)
+Installation
+1. Clone Repository
+git clone https://github.com/YumnaAmalia/lelang-app.git
+cd lelang-app
+2. Install Dependencies
+composer install
+3. Copy Environment File
+cp .env.example .env
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+or on Windows:
 
-## Learning Laravel
+copy .env.example .env
+4. Generate Application Key
+php artisan key:generate
+5. Configure Database
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Update the following variables in the .env file:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+6. Run Database Migration
+php artisan migrate
 
-## Laravel Sponsors
+If seeders are available:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+php artisan db:seed
+7. Start the Application
+php artisan serve
 
-### Premium Partners
+Open:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+http://127.0.0.1:8000
+Project Structure
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+Application Modules
+Dashboard
+Case Management
+Evidence Item Management
+Officer Management
+Executor Management
+Operator Management
+Document Generation
+QR Code Verification
+Document Archive
+Research Purpose
 
-## Contributing
+The system was developed to improve the efficiency and accuracy of auction administration processes by:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Reducing manual document preparation.
+Automating administrative document generation.
+Improving document management.
+Providing document authenticity verification through QR Codes.
+Supporting digital transformation within the Prosecutor's Office.
+Author
 
-## Code of Conduct
+Yumna Amalia
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Bachelor of Computer Science (PJJ)
+BINUS University
 
-## Security Vulnerabilities
+License
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+This repository is intended for academic and research purposes.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+All rights reserved © Yumna Amalia.
